@@ -4,9 +4,10 @@ interface textProp {
     text: string;
 }
 
+// Error message component which can be used throughout the entire application
 export default function ErrMesage({ text }: textProp) {
     return (
-        <div>
+        <div className={styles.divContainer}>
             {text}
         </div>
     )

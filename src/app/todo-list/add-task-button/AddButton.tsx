@@ -1,4 +1,4 @@
-import ErrMesage from '../error_messages/ErrMessage';
+import ErrMesage from '../../error_message/ErrMessage';
 import styles from './AddButton.module.css'
 import { useState } from 'react';
 
@@ -11,25 +11,28 @@ interface Props {
 
 export default function Button({ inputValue, setInputValue, listArr, setListArr }: Props) {
 
+    // State to display error message
     const [isValueFilled, setIsValueFilled] = useState(false)
 
     const addTaskHandler = () => {
+        // If state for handling weither the input value is empty
         if (inputValue.length > 0){
-            setListArr([...listArr, inputValue]);
+            setListArr([inputValue, ...listArr]);
+            setInputValue('');
         } else {
             setIsValueFilled(true)
             setTimeout(() => {
                 setIsValueFilled(false)
-            }, 3000)
+            }, 2500)
         }
-        setInputValue('');
     }
 
     return (
         <>
-            <button onClick={() => addTaskHandler()}>
+            <button className={styles.btn} onClick={() => addTaskHandler()}>
                 Add
             </button>
+            {/* Error message displayed if user tries to add in an empty task */}
             {isValueFilled && <ErrMesage text='Must write down a task to add' />}
         </>
     )

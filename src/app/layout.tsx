@@ -1,4 +1,5 @@
 import './globals.css';
+import styles from './Header.module.css'
 
 export const metadata = {
   title: 'To do',
@@ -13,8 +14,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <header>
-          <nav>
+        {/* Heres the routes */}
+        <header className={styles.headerContainer}>
+          <nav className={styles.navContainer}>
             <a href="/">Home</a>
             <a href="/todo-list">To do</a>
           </nav>

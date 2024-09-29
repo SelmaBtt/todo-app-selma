@@ -8,6 +8,7 @@ interface Props {
 export default function TodoList({ listItems, setListItems }: Props) {
 
     const delHandler = (task: string) => {
+        // Filter through the array to find matching array element to then delete said matching element
         const updatedList = listItems.filter(item => item !== task);
         setListItems(updatedList)
     }
@@ -15,15 +16,16 @@ export default function TodoList({ listItems, setListItems }: Props) {
     return (
         <div>
             {listItems && listItems.length > 0 ? (
-                <ul>
+                <ul className={styles.ulContianer}>
                     {listItems.map((task, idx) => (
-                        <li key={idx}>
+                        <li key={idx} className={styles.listItem}>
                             {task}
-                            <button onClick={() => delHandler(task)}>Delete</button>
+                            <button className={styles.btn} onClick={() => delHandler(task)}>Done</button>
                         </li>
                     ))}
                 </ul>
             ) : (
+                // If no task har been added, user will se a response
                 <p>No tasks to do currently</p>
             )}
         </div>

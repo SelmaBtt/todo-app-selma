@@ -1,0 +1,24 @@
+.container{
+    margin: var(--margin);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4%;
+}
+
+.textContainer{
+    text-align: center;
+}
+
+.title{
+    font-size: 70px;
+}
+
+.enjoyText{
+    font-size: 40px;
+}
+
+.imgContainer{
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}

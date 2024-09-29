@@ -1,0 +1,14 @@
+.ulContianer{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.listItem{
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn{
+    padding: 0 2px;
+}

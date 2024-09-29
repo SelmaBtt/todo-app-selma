@@ -1,13 +1,40 @@
-/* :root {
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Varela+Round&display=swap');
+
+:root {
+  --main-color: rgb(135,185,236);
+  --secondary-color: rgb(236,186,135);
+  --text-font: "Varela Round", sans-serif;
+  --accent-font: "Nanum Pen Script", cursive;
   
+  --margin: 50px;
+  --border-radius: 10px;
 }
-
-body {
-
-} */
 
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: var(--text-font);
+  font-size: 18px;
+}
+
+body a{
+  color: black;
+  text-decoration: none;
+}
+
+body a:hover{
+  text-decoration: underline;
+}
+
+h1, h2{
+  font-family: var(--accent-font);
+}
+
+button{
+  background-color: var(--secondary-color);
+  border-radius: var(--border-radius);
+  font-family: var(--accent-font);
+  font-size: 24px;
 }
