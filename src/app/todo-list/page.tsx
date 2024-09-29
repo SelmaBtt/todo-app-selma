@@ -1,5 +1,5 @@
 "use client";
-import Button from './buttons/AddButton'
+import Button from './add-task-button/AddButton'
 import Input from './input/Input'
 import TodoList from './list/TodoList';
 import styles from './todo.module.css'
@@ -18,7 +18,7 @@ export default function Todo() {
                 inputValue={inputValue} setInputValue={setInputValue}
                 listArr={listArr} setListArr={setListArr}
             />
-            <TodoList listItems={listArr} />
+            <TodoList listItems={listArr} setListItems={setListArr} />
         </div>
     )
 }
