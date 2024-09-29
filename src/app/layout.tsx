@@ -12,7 +12,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <header>
+          <nav>
+            <a href="/">Home</a>
+            <a href="/todo-list">To do</a>
+          </nav>
+        </header>
+        <main>{children}</main>
+      </body>
     </html>
   )
 }
